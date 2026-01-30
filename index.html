@@ -18,9 +18,22 @@
 <body>
 
 <header>
-  <img src="profile.jpg" class="profile-pic">
-  <h1>Hi, I'm Utkarsh Tripathi 👋</h1>
-  <p>Student • Java Programmer • Fitness Enthusiast • Content Creator</p>
+  <img src="profile.jpg" class="profile-pic" onclick="openImage()">
+
+<div id="imageModal" onclick="closeImage()">
+  <img src="profile.jpg" class="zoomed-img">
+</div>
+
+<script>
+  function openImage() {
+    document.getElementById("imageModal").style.display = "flex";
+  }
+
+  function closeImage() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+</script>
+
 
   <!-- BUTTON MENU -->
   <div class="menu">
