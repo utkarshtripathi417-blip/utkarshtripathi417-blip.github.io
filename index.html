@@ -12,6 +12,14 @@
       let section = document.getElementById(id);
       section.style.display = (section.style.display === "none") ? "block" : "none";
     }
+
+    function openImage() {
+      document.getElementById("imageModal").style.display = "flex";
+    }
+
+    function closeImage() {
+      document.getElementById("imageModal").style.display = "none";
+    }
   </script>
 </head>
 
@@ -20,22 +28,9 @@
 <header>
   <img src="profile.jpg" class="profile-pic" onclick="openImage()">
 
-<div id="imageModal" onclick="closeImage()">
-  <img src="profile.jpg" class="zoomed-img">
-</div>
+  <h1>Hi, I'm Utkarsh Tripathi 👋</h1>
+  <p>Student • Java Programmer • Fitness Enthusiast • Content Creator</p>
 
-<script>
-  function openImage() {
-    document.getElementById("imageModal").style.display = "flex";
-  }
-
-  function closeImage() {
-    document.getElementById("imageModal").style.display = "none";
-  }
-</script>
-
-
-  <!-- BUTTON MENU -->
   <div class="menu">
     <button onclick="toggleSection('about')">About</button>
     <button onclick="toggleSection('skills')">Skills</button>
@@ -44,6 +39,11 @@
     <button onclick="toggleSection('contact')">Contact</button>
   </div>
 </header>
+
+<!-- IMAGE ZOOM MODAL -->
+<div id="imageModal" onclick="closeImage()">
+  <img src="profile.jpg" class="zoomed-img">
+</div>
 
 <section id="about">
   <h2>🌈 About Me</h2>
@@ -66,47 +66,4 @@
     <span>Problem Solving</span>
     <span>Video Editing</span>
     <span>Instagram Content Creation</span>
-    <span>Fitness & Gym</span>
-    <span>Creative Design</span>
-  </div>
-</section>
-
-<section id="projects">
-  <h2>🚀 Projects</h2>
-  <div class="card projects">
-    <p>✔ Adult Age Checker Program (Java)</p>
-    <p>✔ Robot Greeting Buttons Program (Java)</p>
-    <p>✔ Control Statements & Loops Practice Projects</p>
-    <p>✔ Personal Portfolio Website on GitHub</p>
-    <p>✔ Instagram Fitness Brand — <span class="highlight">@utkarshlifts.01</span></p>
-  </div>
-</section>
-
-<section id="goals">
-  <h2>🎯 Goals</h2>
-  <div class="card">
-    <p>
-      My goal is to become a skilled software developer, build powerful coding projects,
-      grow my fitness journey, scale my Instagram brand, and inspire others through discipline,
-      creativity, and continuous self-improvement.
-    </p>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>📞 Contact</h2>
-  <div class="card">
-    <p>📧 Email: <b>utkarshtripathi417@gmail.com</b></p>
-    <p>📱 Phone: <b>7007494804</b></p>
-    <p>📷 Instagram: <span class="highlight">@utkarshlifts.01</span></p>
-    <p>💻 GitHub: github.com/utkarshtripathi417-blip</p>
-  </div>
-</section>
-
-<footer>
-  © 2026 Utkarsh Tripathi — Creative Colourful Portfolio ✨  
-  Built with passion, discipline, and code 💪
-</footer>
-
-</body>
-</html>
+    <span>F
