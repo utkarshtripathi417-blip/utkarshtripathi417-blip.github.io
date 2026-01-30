@@ -5,8 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- LINK CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <script>
+    function toggleSection(id) {
+      let section = document.getElementById(id);
+      section.style.display = (section.style.display === "none") ? "block" : "none";
+    }
+  </script>
 </head>
 
 <body>
@@ -15,9 +21,18 @@
   <img src="profile.jpg" class="profile-pic">
   <h1>Hi, I'm Utkarsh Tripathi 👋</h1>
   <p>Student • Java Programmer • Fitness Enthusiast • Content Creator</p>
+
+  <!-- BUTTON MENU -->
+  <div class="menu">
+    <button onclick="toggleSection('about')">About</button>
+    <button onclick="toggleSection('skills')">Skills</button>
+    <button onclick="toggleSection('projects')">Projects</button>
+    <button onclick="toggleSection('goals')">Goals</button>
+    <button onclick="toggleSection('contact')">Contact</button>
+  </div>
 </header>
 
-<section>
+<section id="about">
   <h2>🌈 About Me</h2>
   <div class="card">
     <p>
@@ -28,7 +43,7 @@
   </div>
 </section>
 
-<section>
+<section id="skills">
   <h2>💻 Skills</h2>
   <div class="card skills">
     <span>Java</span>
@@ -43,7 +58,7 @@
   </div>
 </section>
 
-<section>
+<section id="projects">
   <h2>🚀 Projects</h2>
   <div class="card projects">
     <p>✔ Adult Age Checker Program (Java)</p>
@@ -54,7 +69,7 @@
   </div>
 </section>
 
-<section>
+<section id="goals">
   <h2>🎯 Goals</h2>
   <div class="card">
     <p>
@@ -65,12 +80,13 @@
   </div>
 </section>
 
-<section>
-  <h2>📸 Social & Contact</h2>
+<section id="contact">
+  <h2>📞 Contact</h2>
   <div class="card">
+    <p>📧 Email: <b>utkarshtripathi417@gmail.com</b></p>
+    <p>📱 Phone: <b>7007494804</b></p>
     <p>📷 Instagram: <span class="highlight">@utkarshlifts.01</span></p>
     <p>💻 GitHub: github.com/utkarshtripathi417-blip</p>
-    <p>📧 Email: your-email@gmail.com</p>
   </div>
 </section>
 
