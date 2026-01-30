@@ -12,7 +12,7 @@ body {
   text-align: center;
 }
 
-/* SMOOTH COLOR CHANGING BACKGROUND */
+/* BACKGROUND FLOW */
 @keyframes gradientFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -31,17 +31,17 @@ header {
 .profile-pic {
   width: 210px;
   height: 210px;
-  border-radius: 50%;
+  border-radius: 28px;
   object-fit: cover;
-  border: 6px solid white;
+  border: 5px solid white;
   margin-bottom: 18px;
   box-shadow: 0 0 45px rgba(255,255,255,0.7);
-  transition: 0.3s ease;
+  transition: 0.35s ease;
   cursor: pointer;
 }
 
 .profile-pic:hover {
-  transform: scale(1.08);
+  transform: scale(1.09);
   box-shadow: 0 0 70px #ff00ff;
 }
 
@@ -59,15 +59,23 @@ header {
   z-index: 999;
 }
 
-.zoomed-img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 20px;
-  box-shadow: 0 0 40px white;
-  animation: zoomIn 0.3s ease;
+/* ZOOM BOX */
+.zoom-box {
+  background: white;
+  padding: 15px;
+  border-radius: 18px;
+  animation: smoothZoom 0.35s ease forwards;
 }
 
-@keyframes zoomIn {
+.zoomed-img {
+  width: 380px;
+  max-width: 90vw;
+  border-radius: 14px;
+  display: block;
+}
+
+/* SMOOTH ZOOM */
+@keyframes smoothZoom {
   from { transform: scale(0.7); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
@@ -112,7 +120,7 @@ p {
   box-shadow: 0 0 20px #ff9f45;
 }
 
-/* SECTIONS HIDDEN INITIALLY */
+/* HIDE SECTIONS INITIALLY */
 section {
   display: none;
   padding: 60px 20px;
@@ -156,14 +164,14 @@ section {
   font-size: 1.05rem;
 }
 
-/* INSTAGRAM LINK */
-.insta-link {
+/* SOCIAL LINKS */
+.social-link {
   color: #e11d48;
   font-weight: bold;
   text-decoration: none;
 }
 
-.insta-link:hover {
+.social-link:hover {
   text-decoration: underline;
 }
 
