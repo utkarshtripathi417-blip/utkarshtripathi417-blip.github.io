@@ -10,7 +10,20 @@
   <script>
     function toggleSection(id) {
       let section = document.getElementById(id);
-      section.style.display = (section.style.display === "none") ? "block" : "none";
+      let sections = document.querySelectorAll("section");
+
+      sections.forEach(sec => {
+        if (sec.id !== id) {
+          sec.style.display = "none";
+        }
+      });
+
+      if (section.style.display === "block") {
+        section.style.display = "none";
+      } else {
+        section.style.display = "block";
+        section.scrollIntoView({ behavior: "smooth" });
+      }
     }
 
     function openImage() {
@@ -40,7 +53,7 @@
   </div>
 </header>
 
-<!-- IMAGE ZOOM MODAL -->
+<!-- IMAGE ZOOM -->
 <div id="imageModal" onclick="closeImage()">
   <img src="profile.jpg" class="zoomed-img">
 </div>
@@ -66,4 +79,52 @@
     <span>Problem Solving</span>
     <span>Video Editing</span>
     <span>Instagram Content Creation</span>
-    <span>F
+    <span>Fitness & Gym</span>
+    <span>Creative Design</span>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>🚀 Projects</h2>
+  <div class="card projects">
+    <p>✔ Adult Age Checker Program (Java)</p>
+    <p>✔ Robot Greeting Buttons Program (Java)</p>
+    <p>✔ Control Statements & Loops Practice Projects</p>
+    <p>✔ Personal Portfolio Website on GitHub</p>
+    <p>✔ Instagram Fitness Brand — <span class="highlight">@utkarshlifts.01</span></p>
+  </div>
+</section>
+
+<section id="goals">
+  <h2>🎯 Goals</h2>
+  <div class="card">
+    <p>
+      My goal is to become a skilled software developer, build powerful coding projects,
+      grow my fitness journey, scale my Instagram brand, and inspire others through discipline,
+      creativity, and continuous self-improvement.
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>📞 Contact</h2>
+  <div class="card">
+    <p>📧 Email: <b>utkarshtripathi417@gmail.com</b></p>
+    <p>📱 Phone: <b>7007494804</b></p>
+    <p>
+      📷 Instagram:
+      <a href="https://instagram.com/utkarshlifts.01" target="_blank" class="insta-link">
+        @utkarshlifts.01
+      </a>
+    </p>
+    <p>💻 GitHub: github.com/utkarshtripathi417-blip</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Utkarsh Tripathi — Creative Colourful Portfolio ✨  
+  Built with passion, discipline, and code 💪
+</footer>
+
+</body>
+</html>
